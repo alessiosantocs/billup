@@ -10,7 +10,7 @@
 
   var stylesheet = document.createElement("link");
   stylesheet.rel="stylesheet";
-  stylesheet.href="https://raw.githubusercontent.com/alessiosantocs/billup/master/main.css?token=AAUPQ6Y7N763ATN2WUQY76TAFI4V2";
+  stylesheet.href="https://raw.githubusercontent.com/alessiosantocs/billup/master/main.css";
   document.head.append(stylesheet);
 
   var background = document.createElement("div");
