@@ -1,0 +1,91 @@
+.billup-background{
+  position: fixed;
+  top: 1000%;
+  bottom: 0;
+  left:0;
+  right:0;
+  background: rgba(0,0,0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.billup-background.billup-visible{
+  top: 0;
+  opacity: 1;
+}
+
+.billup-popup{
+  box-sizing: border-box;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right:0;
+  /* height: 200px; */
+  background: white;
+  border-top: 1px solid lightgray;
+  box-shadow: 0px 0px 0px #BBB;
+
+  transform: translateY(100%);
+  z-index: 1001;
+
+  max-width: 500px;
+  margin: auto;
+}
+
+.billup-popup.billup-visible{
+  transition: transform 0.5s 0.3s ease, box-shadow 0.3s 0.6s ease;
+  transform: translateY(0%);
+  box-shadow: 0px -10px 10px #BBB;
+}
+
+/* Temporary media query to make it look good */
+@media(min-width: 768px){
+  .billup-popup.billup-visible{
+    transform: translateY(-250%);
+  }
+}
+
+.billup-title{
+  display: block;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: Helvetica, Sans-serif;
+  color: darkblue;
+  margin-bottom: 15px;
+}
+
+.billup-price-change{
+  display: block;
+  font-size: 16px;
+  font-family: Helvetica, Sans-serif;
+  margin-bottom: 10px;
+}
+
+.billup-payment-method{
+  display: block;
+  font-size: 16px;
+  font-family: Helvetica, Sans-serif;
+}
+
+.billup-well{
+  display: block;
+  background: #f9fafb;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.billup-button{
+  display: block;
+  width: 100%;
+  background: blue;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Helvetica, Sans-serif;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript">
+      window.addEventListener("load", function(){
+        Billup.config({
+          stripe_customer_id: "test_123456789",
+          billup_public_key: "pk_123456789"
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>
+      <a href="#" id="upgradePlan">Upgrade to PRO</a>
+      <script type="text/javascript">
+        Billup.create({
+          target: "#upgradePlan",
+          strategy_id: "st_123456780"
+        })
+      </script>
+      <small>Have users easily upgrade to a higher plan</small>
+    </p>
+    <p>
+      <a href="#" id="enableNewFeature">Get early access to Autopilot</a>
+      <script type="text/javascript">
+        Billup.create({
+          target: "#enableNewFeature",
+          strategy_id: "st_123456781"
+        })
+      </script>
+
+      <small>Get people interested in new features to commit </small>
+    </p>
+    <p>
+      <a href="#" id="enableAddOn">Enable Messages add-on</a>
+      <script type="text/javascript">
+        Billup.create({
+          target: "#enableAddOn",
+          strategy_id: "st_123456782"
+        })
+      </script>
+
+      <small>Have users enable add-ons to enrich their experience</small>
+    </p>
+    <p>
+      <a href="#" id="requestPremium">Request one-time premium onboarding</a>
+      <script type="text/javascript">
+        Billup.create({
+          target: "#requestPremium",
+          strategy_id: "st_123456783"
+        })
+      </script>
+
+      <small>Upgrade to an existing plan for more features</small>
+    </p>
+  </body>
+</html>
